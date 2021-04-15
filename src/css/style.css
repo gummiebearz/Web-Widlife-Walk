@@ -119,7 +119,7 @@ footer {
 }
 
 /**
- * TODO: style the Search Form (USE OF FLEX BOX)
+ * TODO: style the Search Form (USE OF GRID)
 */
 
 /* Set the width all parent elements to 100% */
@@ -130,9 +130,9 @@ html, body, main, section {
 #searchLocForm{
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  grid-gap: 5px;
 }
 
 #location {
@@ -141,11 +141,19 @@ html, body, main, section {
 }
 
 #searchBtn {
-  position: relative;
+  position: relative; /* Make the position of this input relative to all parents elements */
+  width: 100%; /* Set the width to 100% relatively to fill up all the space available in the parent's container */
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
+  grid-template-columns: 0.5fr 1.5fr;
 }
 
 /* Source for ref: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-/* Make the search form a flex box, make the search button a grid */ 
+/* Flexbox 
+  #searchLocForm {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+*/

@@ -10,6 +10,7 @@ function validate(event) {
 	);
 
 	// Validation functions
+	const isNumeric = (value) => /^[-+]?[0-9]*.?[0-9]*$/.test(value);
 	const validLat = (lat) => lat >= -90 && lat <= 90;
 	const validLong = (long) => long >= -180 && long <= 180;
 
@@ -20,8 +21,6 @@ function validate(event) {
 
 	const textLat = document.querySelector('.required span#lat');
 	const textLong = document.querySelector('.required span#long');
-
-	const isNumeric = (value) => /^[-+]?[0-9]*.?[0-9]*$/.test(value);
 
 	if (!validLat(latitude) || !isNumeric(latitude)) {
 		textLat.innerText = 'must be a valid Latitude (-90 to 90)';

@@ -4,4 +4,4 @@
 ## Please note that this is not for any uses.
 Made by: Vivian Pham\
 Contact: vivianpham0904@gmail.com\
-Discord: gumball#3231\
+Discord: gumball#3231

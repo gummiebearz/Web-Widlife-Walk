@@ -21,12 +21,14 @@ function validate(event) {
 	const textLat = document.querySelector('.required span#lat');
 	const textLong = document.querySelector('.required span#long');
 
-	if (!validLat(latitude)) {
+	const isNumeric = (value) => /^[-+]?[0-9]*.?[0-9]*$/.test(value);
+
+	if (!validLat(latitude) || !isNumeric(latitude)) {
 		textLat.innerText = 'must be a valid Latitude (-90 to 90)';
 		event.preventDefault();
 	} else textLat.innerText = '';
 
-	if (!validLong(longitude)) {
+	if (!validLong(longitude) || !isNumeric(longitude)) {
 		textLong.innerText = 'must be a valid Longitude (-180 to 180)';
 		event.preventDefault();
 	} else textLong.innerText = '';

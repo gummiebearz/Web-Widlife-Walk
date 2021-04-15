@@ -10,7 +10,7 @@ function validate(event) {
 	);
 
 	// Validation functions
-	const isNumeric = (value) => /^[-+]?[0-9]*.?[0-9]*$/.test(value);
+	const isNumeric = (value) => /^[-+]?[0-9]+.?[0-9]*$/.test(value);
 	const validLat = (lat) => lat >= -90 && lat <= 90;
 	const validLong = (long) => long >= -180 && long <= 180;
 

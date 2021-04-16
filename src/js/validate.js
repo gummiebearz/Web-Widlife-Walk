@@ -17,7 +17,6 @@ function validate(event) {
 	// Validate the latitude and longitude values
 	const latitude = document.querySelector('#speciesLat').value;
 	const longitude = document.querySelector('#speciesLong').value;
-	console.log('lat & long: ', latitude, longitude);
 
 	const textLat = document.querySelector('.required span#lat');
 	const textLong = document.querySelector('.required span#long');

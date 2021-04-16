@@ -40,7 +40,14 @@ function cardBody(name, date, uri, wikipediaUrl) {
 	h3.appendChild(nameAnchor);
 	body.appendChild(h3);
 
-	const dateAnchor = createAnchor(uri, date.toLocaleDateString());
+	const dateAnchor = createAnchor(
+		uri,
+		date.toLocaleDateString('fr-CA', {
+			year: 'numeric',
+			month: '2-digit',
+			day: '2-digit',
+		})
+	);
 	const h4 = document.createElement('h4');
 	h4.appendChild(dateAnchor);
 	body.appendChild(h4);

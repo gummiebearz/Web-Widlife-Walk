@@ -72,4 +72,4 @@ SimpleMap.prototype.setLocation = function (lat, lng) {
   this.clear();
   // Update the position of the map's centre
   this.map.setView([lat, lng], this.zoomLevel);
-}
+};
